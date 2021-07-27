@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>WEB</title>
+    </head>
+    <body>
+        <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">
+            <table>
+                <tr>
+                    <td>Felhasználónév:</td>
+                    <td><input type="text" name="username" /> * <?php echo $usernameErr; ?></td>
+                </tr>
+                <tr>
+                    <td>Jelszó:</td>
+                    <td><input type="password" name="password" /> * <?php echo $passwordErr; ?></td>
+                </tr>
+                <tr>
+                    <td>Név:</td>
+                    <td><input type="text" name="name" /> * <?php echo $nameErr; ?></td>
+                </tr>
+                <tr>
+                    <td>Email:</td>
+                    <td><input type="text" name="email" /> * <?php echo $emailErr; ?></td>
+                </tr>
+                <tr>
+                    <td>Magamról:</td>
+                    <td><textarea rows="5" cols="30" name="comment"></textarea></td>
+                </tr>
+                <tr>
+                    <td>Nem:</td>
+                    <td><input type="radio" name="gender" value="Férfi" />Férfi</td> 
+                    <td><input type="radio" name="gender" value="Nő" />Nő</td>
+                </tr>
+                <tr>
+                    <td>Háziállatok:</td>
+                    <td><input type="checkbox" name="pets[]" value="kutya" /> Kutya </td>
+                    <td><input type="checkbox" name="pets[]" value="macska" /> Macska </td>
+                    <td><input type="checkbox" name="pets[]" value="hal" /> Hal </td>
+                </tr>
+                <tr>
+                    <td>Kedvenc országaim:</td>
+                    <td>
+                        <select multiple="multiple" name="country[]">
+                            <option value="Japán">Japán</option>
+                            <option value="Magyarország">Magyarország</option>
+                            <option value="USA">USA</option>
+                            <option value="Németország">Németország</option>
+                        </select>
+                    </t>
+                </tr>
+                <tr>
+                    <td colspan="2"><input type="submit" value="Küld" /></td>
+                </tr>
+            </table>
+        </form>
+        <br />
+        <hr />
+    </body>
+</html>
